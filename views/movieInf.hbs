@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script defer src="script.js"> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+</head>
+<body>
+        <div class=" bg-dark row">
+            <div class=" bg-dark col-md-12">
+                <nav class=" bg-dark navbar bg-light">
+                        <div class=" bg-dark container-fluid">
+                        <a  class=" bg-dark narbar-brand fw-bold" href="/">Home</a>
+                            <form role="search" class=" bg-dark d-flex"  method="get" action="/search/">
+                            <input type="search" class=" bg-dark form-control" v-model="strSearch" placeholder="id" name="moviename" aria-label="Search">   
+                            <button class=" bg-dark btn btn-outline-success" type="submit" >Search</button>
+                            </form>
+
+                             <form role="search" class=" bg-dark d-flex"  method="get" action="/searchcast/">
+             <input type="search" class=" bg-dark form-control" v-model="strSearch" placeholder="cast" name="cast" aria-label="Search">   
+            <button class=" bg-dark btn btn-outline-success" type="submit" >Search</button>
+       </form>
+
+                            <form  action="/login">        
+                            <button class=" bg-dark btn btn-outline-success" type="submit" >SIGN IN</button>
+                            </form>
+                        </div>
+                </nav>
+
+            </div>
+        </div>
+       
+    <h5 class=" bg-dark card-header text-info">Moive Information</h5>
+    <div class=" bg-dark row row-cols-1 row-cols-md-2 g-4">
+
+    <div class=" bg-dark col">
+            <div class=" bg-dark card h-100">
+                <img src="{{person.img}}" class=" bg-dark card-img-top"alt="{{person.idmovie}}" style="height:500px;width:50%% ;">
+                <blockquote class=" bg-dark blockquote mb-0">
+                Tilte:  {{person.title}}
+                </blockquote>
+                <blockquote class=" bg-dark blockquote mb-0">
+                Rank: {{person.toprank}}
+                </blockquote>
+                <blockquote class=" bg-dark blockquote mb-0">
+                Rating:  {{person.rating}}
+                </blockquote>
+                <blockquote class=" bg-dark blockquote mb-0">
+                Genres:  {{person.genres}}
+                </blockquote>       
+            </div>
+    </div>
+                <div class=" bg-dark col">
+                  
+                 {{#each cast}}
+                        
+                <a href="/cast/?idcast={{idcast}}">{{name}}</a>
+                {{/each}}
+    </div>
+   
+   <div>
+     <h3>Reviews</h3>
+        {{#each reviews}}
+        <div class=" bg-dark card">
+            <div class=" bg-dark card-header">
+                {{reviewtitle}}
+            </div>
+            <div class=" bg-dark card-body">
+                <blockquote class=" bg-dark blockquote mb-0">
+                <p>{{reviewtext}}</p>
+                
+                </blockquote>
+            </div>
+            <div class=" bg-dark card-footer">
+                <blockquote class=" bg-dark blockquote mb-0">
+                <p>{{submissiondate}}</p>
+                
+                </blockquote>
+            </div>
+            </div>
+       {{/each}}
+   </div>
+    </div>
+    <nav aria-label="Page navigation example">
+    <ul class=" bg-light pagination">
+   <li class="page-item"><a class="page-link" href="?idmovie={{id}}&page={{prev}}">prev</a></li>
+    <li class="page-item"><a class="page-link" href="?idmovie={{id}}&page=1">1</a></li>
+    <li class="page-item"><a class="page-link" href="?idmovie={{id}}&page=2">2</a></li>
+    <li class="page-item"><a class="page-link" href="?idmovie={{id}}&page=3">3</a></li>
+   <li class="page-item"><a class="page-link" href="?idmovie={{id}}&page={{next}}">next</a></li>
+  
+    </ul>
+    </nav>
+        </div>
+</body>
+</html> 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script defer src="script.js"> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- Sing in  Form -->
+<section class=" bg-dark sign-in">
+    <div class=" bg-dark container">
+        <div class=" bg-dark signin-content">
+            
+
+            <div class=" bg-dark signin-form">
+                <h2 class=" bg-dark form-title">Sign In</h2>
+                 <form action="/login" method="post" style="margin:auto;width:100%;text-align:center;padding:2em;">
+                    <div class=" bg-dark form-group">
+                        <label for="your_name"><i class=" bg-dark zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text"  name="username" id="your_name" placeholder="Your Name" />
+                    </div>
+                    <div class=" bg-dark form-group">
+                        <label for="your_pass"><i class=" bg-dark zmdi zmdi-lock"></i></label>
+                        <input type="password" name="password" id="your_pass" placeholder="Password" />
+                    </div>
+                    <div class=" bg-dark form-group">
+                         <input type="radio" name="allowcookie" />
+                <label for="allowcookie">remember</label>
+                    </div>
+                    <div class=" bg-dark form-group form-button">
+                        <input type="submit" name="signin" id="signin" class=" bg-dark form-submit" value="Log in" />
+                    </div>
+                </form>
+                <div class=" bg-light signin-image">
+              
+                <a href="/signup" class=" bg-light signup-image-link">Create an account</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html> 

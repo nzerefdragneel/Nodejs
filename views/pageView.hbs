@@ -1,0 +1,38 @@
+<div class="table">
+    <table class="content">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col" style="width: 40%;">Email</th>
+                <th scope="col">Avatar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="thead-light" style="min-height: 170px;" id={{id1}} onclick="location.href = '/?id=' + this.id;">
+                <th scope="row">{{id1}}</th>
+                <td>{{fname1}}</td>
+                <td>{{lname1}}</td>
+                <td>{{email1}}</td>
+                <td><img class="img" src={{img1}} alt="p.id"></td>
+            </tr>
+            <tr class="thead-light" style="min-height: 170px;" id={{id2}} onclick="location.href = '/?id='+this.id">
+                <th scope="row">{{id2}}</th>
+                <td>{{fname2}}</td>
+                <td>{{lname2}}</td>
+                <td>{{email2}}</td>
+                <td>
+                    <img class="img" src={{img2}} alt="p.id">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="page">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination" name="{{numberPage}}">
+        </ul>
+    </nav>
+</div>
